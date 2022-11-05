@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./Style.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="text">BMI Calculator</div>
+        <form class="radio-input">
+          <div>Gender</div>
+          <input type="radio" name=" gender" class="male"> Male
+          <input type="radio" name="gender" Class="female"> Female
+        </form>
+        <div class="age-input">
+          <label>Age</label>
+          <input type="text"class="age" id= "age"/>
+          <span>ages: 2-120</span>
+        </div>
+        
+          
+        
+        <div class="height-input">
+          <label>Height</label>
+          <input type="text" class="height" placeholder="cm" id="height"/>
+          <p id="number"></p>
+        </div>
+        <div class="weight-input">
+          <label>Weight</label>
+          <input type="text" class="weight" placeholder="Kg" id="weight"/>
+          <p id="number"></p>
+
+        </div>
+        <div class="buttons">
+            <button class="btn" onClick="bmi()">Calculate</button>
+            <button class="clear-btn" onClick="clear()">Clear</button>
+        </div>
+         
+      
+      <p id="result"></p>
+    </div>
+    <script >
+        
+               
+                
+        const bmi=()=>{
+            if( document.getElementById("height").value=="" || document.getElementById("weight").value=="" || isNaN(document.getElementById("height").value) || isNaN(document.getElementById("weight").value))
+            {
+            document.getElementById("number").innerHTML = " Enter Only Positive Number";
+                
+            }
+            else{
+                
+                var bmi = (parseFloat(document.getElementById("weight").value))/((parseFloat(document.getElementById("height").value))**2);
+                var total = bmi.toFixed(2);
+            }
+            
+            
+            document.getElementById("result").innerHTML = "Your BMI is: " + total +"  kg/m2" ;
+            if(total<16){
+            document.getElementById("result").innerHTML = "Category: Severe Thinnes";
+                
+            }
+            else if(total>=16 && total <17){
+            document.getElementById("result").innerHTML = "Category: Moderate Thinnes";
+
+            }
+            else if(total>=17 && total <18.5){
+                document.getElementById("result").innerHTML = "Category: Mild Thinnes";
+                
+                }
+
+            else if(total>=18.5 && total < 25){
+                    document.getElementById("result").innerHTML = "Category: Normal";
+                    
+                }
+            else if(total>=25 && total <30){
+                    document.getElementById("result").innerHTML = "Category: Over Weight";
+                    
+                }
+            else if(total>=30 && total <35){
+                    document.getElementById("result").innerHTML = "Category: Obese Class I";
+                    
+                }
+            else if(total>=35 && total <40){
+                    document.getElementById("result").innerHTML = "Category: Obese Class II";
+                    
+                }
+                else if(total>=40){
+                    document.getElementById("result").innerHTML = "Category: Obese Class III";
+                    
+                }
+        }
+
+const clear = () =>{
+  document.getElementById("height").innerHTML = ""
+  document.getElementById("weight").innerHTML = ""
+  document.getElementById("age").innerHTML = ""
+}
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+body {
+  background-color: rgb(233, 165, 165);
+}
+.container {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  background-color: rgb(3, 3, 56);
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  border-radius: 6px;
+  margin-top: 2%;
+}
+
+label {
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 3vh;
+}
+.radio-input {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 3vh;
+}
+.text{
+  font-size: 4vh;
+  color: azure;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-family: arial;
+}
+
+#height{
+  width: 60%;
+  padding: 2vh;
+  margin-bottom: 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  margin: auto;
+
+
+}
+.age-input{
+  width: 100%;
+  text-align: center;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+#weight{
+  width: 60%;
+  padding: 2vh;
+  margin-bottom: 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  margin: auto;
+
+}
+.age{
+  width: 60%;
+  padding: 2vh;
+  margin-bottom: 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  margin: auto;
+
+}
+
+button {
+  padding: 2vh;
+  background-color: rgb(1, 138, 31);
+  border-radius: 6px;
+  margin-top: 20px;
+}
+.btn:hover {
+  background-color: rgb(39, 168, 67);
+}
+.clear-btn:hover {
+  background-color: rgb(221, 51, 51);
+}
+#result{
+    color: antiquewhite;
+}
+#number{
+    color: red;
+}
+
+.male{
+  padding: 0;
+}
+.female{
+  padding:0;
+}
